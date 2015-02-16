@@ -1,0 +1,35 @@
+
+
+.icon-sprite {
+  background: url(../images/icon-sprite.png) no-repeat;
+  display: inline-block;
+}
+
+// Retina Detection
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) { 
+  .icon-sprite {
+    background: url(../images/icon-sprite-hd.png) no-repeat;
+    background-size: 450px 25px; // Dimensions of icon-sprite.png
+  }
+}
+
+.arrow-up {
+  @include arrow-up(#fff, 6px);
+  display: inline-block;
+}
+
+.arrow-down {
+  @include arrow-down(#fff, 6px);
+  display: inline-block;
+}
+
+.arrow-right {
+  @include arrow-right(#dcdcdc, 6px);
+  display: inline-block;
+}
+
+.arrow-left {
+  @include arrow-left(#dcdcdc, 6px);
+  display: inline-block;
+}

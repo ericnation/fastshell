@@ -1,0 +1,105 @@
+// LAYOUT
+
+.row {
+	width: 100%;
+	padding: 5px 5px;
+	*zoom: 1;
+}
+
+.row:before,
+.row:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.row:after {
+	clear: both;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px 20px;
+}
+
+.checkout-container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 10px 20px;
+}
+
+.col-2-sm {
+	width: 16.6666%;
+	float: left;
+	display: block;
+}
+
+.col-3	{
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+
+	@include apply-to ("max-width", 850px) {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+}
+
+.col-4	{
+	width: 36.3333%;
+	float: left;
+
+	@include apply-to ("max-width", 850px) {
+		width: 100%;
+		float: none;
+	}
+}
+
+.col-6-sm {
+	width: 50%;
+	float: left;
+}
+
+.col-6 {
+	width: 50%;
+	float: left;
+
+	@include apply-to ("max-width", 850px) {
+		width: 100%;
+		float: none;
+	}
+}
+
+.col-8 {
+	width: 60.6667%;
+	float: left;
+
+	@include apply-to ("max-width", 850px) {
+		width: 100%;
+		float: none;
+	}
+}
+
+.form-col {
+	width: 55%;
+	float: left;
+	margin-right: 30px;
+
+	@include apply-to ("max-width", 800px) {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+}
+
+.order-summary-col {
+	width: 40%;
+	float: left;
+
+	@include apply-to ("max-width", 800px) {
+		width: 100%;
+		float: none;
+	}
+}

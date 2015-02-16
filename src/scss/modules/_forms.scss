@@ -1,0 +1,156 @@
+
+/*===================================
+  Global Form Element Styles
+-------------------------------------*/
+
+.form-group {
+  clear: both;
+  margin-bottom: 10px;
+  position: relative;
+
+  label {
+    color: #5a5a5a;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    @include box-shadow(none);
+    background: #fff;
+    border: 1px solid #cacaca;
+    clear: both;
+    color: #9a9a9a;
+    height: 35px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    
+    &.disabled-input {
+      background: #eee;
+      color: #9a9a9a;
+    }
+
+    &:focus {
+      color: #4a4a4a;
+    }
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  /* --- [ Select Dropdown ] --- */
+
+  .select-wrap {
+    @include box-shadow(none);
+    background: #fff;
+    border: 1px solid #cacaca;
+    clear: both;
+    height: 35px;
+    margin-bottom: -2px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    select {
+      @include border-radius(0);
+      -webkit-appearance: none;
+         -moz-appearance: none;
+      background: transparent;
+      border: none;
+      color: #5a5a5a;
+      height: 33px;
+      outline: 0;
+      padding: 10px;
+      position: relative;
+      width: 140%;
+      z-index: 50; // Has to be greather than the select arrow
+    }
+  }
+
+  .select-arrow {
+    background: #fff;
+    height: 103%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    z-index: 40;
+    
+    .arrow-down {
+      @include arrow-down(#ccc, 6px);
+      left: 50%;
+      margin: -3px 0 0 -6px;
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  /* --- [ Checkbox ] --- */
+
+  .label-checkbox {
+    color: #7a7a7a;
+    line-height: 1.3;
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    
+    input {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .icheckbox_minimal-grey {
+      position: absolute !important; // Have to overwrite plugin inline styles
+      left: 0;
+      top: 0;
+    }
+  }
+
+  /* --- [ Radio Buttons ] --- */
+
+  .radio-input-wrap {
+    float: left;
+  }
+
+  .label-radio {
+    display: inline-block;
+    float: none;
+    line-height: 1;
+    margin-top: 8px;
+    display: block;
+    text-align: left;
+    width: auto;
+  }
+
+  /* --- [ Invalid State ] --- */
+
+  .icon-invalid {
+    display: none;
+    position: absolute;
+    right: 12px;
+    bottom: 6px;
+  }
+
+  &.invalid {
+
+    input[type="text"],
+    input[type="password"],
+    .select-wrap {
+      border-color: #c5181d;
+    }
+
+    label {
+      color: #c5181d;
+    }
+
+    .icon-invalid {
+      display: block;
+    }
+  }
+}
+
+
